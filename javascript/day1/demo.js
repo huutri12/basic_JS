@@ -6,3 +6,7 @@ console.log(' compare a, b: ', 'a = ', a, 'b = ', a, ' result: ', a == b)
 
 // === type, value convention
 // == value
+
+// Empty, null, undefined
+let c = {};
+console.log('check value: ', c)
