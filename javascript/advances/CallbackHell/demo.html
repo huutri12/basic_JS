@@ -40,8 +40,42 @@
         request.send();
     }
 
-    getTodo(1, callback);
-    getTodo(2, callback);
+    getTodo(1, (error, data) => {
+        if (error) {
+            console.log('calling callback with error', error)
+        }
+        if (data) {
+            console.log('calling callback with data', data)
+
+            getTodo(2, (error, data) => {
+                if (error) {
+                    console.log('calling callback with error', error)
+                }
+                if (data) {
+                    console.log('calling callback with data', data)
+
+                    getTodo(3, (error, data) => {
+                        if (error) {
+                            console.log('calling callback with error', error)
+                        }
+                        if (data) {
+                            console.log('calling callback with data', data)
+                        }
+                    })
+                }
+            });
+        }
+    });
+
+    //promise example
+
+    const promiseExp = () => {
+
+        return new Promise((resolve, reject) => {
+            resolve('get some data')
+        });
+    }
+    promiseExp();
 
 
 
