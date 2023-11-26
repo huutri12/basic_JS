@@ -8,5 +8,5 @@ console.log(' compare a, b: ', 'a = ', a, 'b = ', a, ' result: ', a == b)
 // == value
 
 // Empty, null, undefined
-let c = {};
+let c = {}; n
 console.log('check value: ', c)
